@@ -1,0 +1,300 @@
+    /*---- fonts ---- */
+    
+    @import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+    /* common style or utilities  */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Uchen', serif;
+    }
+    /* ------ banner and blog style  ---- */
+    
+    #Container {
+        height: 100vh;
+        width: 100%;
+        background-color: #2D25A0;
+        color: #ffffff;
+        padding-top: 135px;
+        margin-bottom: 70px;
+    }
+    
+    .blogs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 130px;
+    }
+    
+    h1 {
+        font-size: 64px;
+        line-height: 80px;
+        margin-bottom: 27px;
+        padding-right: 0;
+        padding-left: 102px;
+    }
+    
+    span {
+        color: yellowgreen;
+        font-size: 70px;
+    }
+    /* button style */
+    
+    .blog a {
+        background-color: #E02C6D;
+        color: #ffffff;
+        padding: 10px 24px 10px 24px;
+        text-decoration: none;
+        border-radius: 10px;
+        margin-left: 102px;
+        letter-spacing: 2px;
+    }
+    
+    .blog a:hover {
+        background-color: #3DBAFD;
+        color: yellow;
+        transition: 1s;
+    }
+    /* blog img  */
+    
+    .blog img {
+        width: 550px;
+    }
+    
+    .blog img:hover {
+        transform: scale(1.1);
+        transition: 1s ease-in-out;
+    }
+    /* Scroller  */
+    
+    .scroll_down {
+        height: 50px;
+        width: 30px;
+        border: 2px solid #3DBAFD;
+        position: absolute;
+        border-radius: 50px;
+        left: 50%;
+        bottom: 10%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+    
+    .scroll_down::before,
+    .scroll_down::after {
+        content: "";
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        border: 2px solid #3DBAFD;
+        height: 10px;
+        width: 10px;
+        transform: translate(-50%, 50%) rotate(45deg);
+        border-top: transparent;
+        border-left: transparent;
+        animation: scrollDown 1s ease-in-out infinite;
+    }
+    
+    .scroll_down::after {
+        top: 30%;
+    }
+    
+    @keyframes scrollDown {
+        0% {
+            opacity: 0;
+        }
+        30% {
+            opacity: 1;
+        }
+        60% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            top: 80%;
+        }
+    }
+    /* -------players description------ */
+    
+    .players {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        align-items: center;
+        margin-right: 200px;
+        margin-left: 180px;
+    }
+    
+    .player {
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+        width: 330px;
+        height: 474px;
+        padding: 15px;
+        border-radius: 5px;
+    }
+    
+    .player_img img {
+        width: 300px;
+        height: 256px;
+        border-radius: 5px;
+        /* overflow: hidden; */
+    }
+    
+    .player_img img:hover {
+        transform: scale(-1) rotate(180deg);
+        transition: 1s ease-in-out;
+    }
+    
+    .player_details {
+        width: 300px;
+        height: 154px;
+    }
+    /* ---------highlight section------- */
+    
+    .highlight {
+        margin-top: 100px;
+        padding-bottom: 150px;
+        background-color: #EEEEEE;
+        padding: 50px;
+    }
+    
+    article {
+        margin: 102px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    
+    .live_match {
+        padding-top: 40px;
+        display: flex;
+        margin-left: 100px;
+    }
+    
+    .live_match iframe {
+        padding-left: 40px;
+    }
+    /* popular player gallery  */
+    
+    .popular_container {
+        background-color: #2D25A0;
+        padding: 40px;
+        align-items: center;
+        color: wheat;
+        letter-spacing: 2px;
+    }
+    
+    .most_popular {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .popular img {
+        width: 190px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+    
+    .popular img:hover {
+        transform: scale(-1) rotate(180deg);
+        transition: 1s ease-in-out;
+    }
+    /* footer  */
+    
+    .footer_container {
+        text-align: center;
+        margin-bottom: 64px;
+        padding-top: 50px;
+    }
+    
+    .logo img {
+        height: 110px;
+        width: 484px;
+    }
+    
+    .social_icon {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    .fab {
+        background-color: #E7E7E8;
+        padding: 20px;
+        border-radius: 50%;
+        color: #969BAB;
+    }
+    /* -----------Media Queries-------- */
+    
+    @media only screen and (max-width:688px) {
+        .blogs {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-row-gap: 40px;
+        }
+        .blog.first_blog h1 {
+            margin-left: 100px;
+            line-height: 46px;
+            font-size: 34px;
+        }
+        span {
+            color: yellowgreen;
+            font-size: 34px;
+        }
+        .blog img {
+            margin-top: 20px;
+            width: 300px;
+            padding-left: 30px;
+        }
+        .players {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-row-gap: 30px;
+            margin-left: 20px;
+        }
+        .player {
+            box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+            width: 330px;
+            height: 474px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .blog>h1 {
+            padding-left: 0;
+            font-size: 26px;
+        }
+        article {
+            margin: 0;
+            padding-bottom: 30px;
+        }
+        .live_btn a {
+            margin: 0;
+        }
+        .playing img {
+            padding-left: 0;
+            height: 200px;
+            width: 270px;
+        }
+        .live_match {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+        video {
+            width: 280px;
+            height: 200px;
+        }
+        .youtube {
+            padding-top: 20px;
+            margin: 0;
+            padding-left: 0;
+            height: 200px;
+            width: 300px;
+        }
+        .logo img {
+            height: 80px;
+            width: 350px;
+        }
+        .popular img {
+            width: 300px;
+            padding-top: 20px;
+            padding-left: 5px;
+        }
+    }
